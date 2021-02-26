@@ -7,20 +7,21 @@
 #define INITIAL_CAPACITY 10
 
 typedef struct {
-  int* items;
+  void* items;
+  size_t item_size;
   size_t size;
   size_t capacity;
 } Vector;
 
-void vector_init(Vector* vector);
+void vector_init(Vector* vector, size_t item_size);
 void vector_free(Vector* vector);
 void vector_resize(Vector* vector, size_t capacity);
-void vector_push(Vector* vector, int item);
+void vector_push(Vector* vector, void* item);
+void* vector_at(Vector* vector, size_t index);
 bool vector_is_empty(Vector* vector);
+bool vector_insert(Vector* vector, void* item, size_t index);
 // TODO:
-// insert(index, item)
 // delete(index)
-// at() with bounds check
 // shrink_to_fit()
 
 #endif
