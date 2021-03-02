@@ -20,8 +20,7 @@ void vector_push(Vector* vector, void* item);
 void* vector_at(Vector* vector, size_t index);
 bool vector_is_empty(Vector* vector);
 bool vector_insert(Vector* vector, void* item, size_t index);
-// TODO:
-// delete(index)
-// shrink_to_fit()
+bool vector_delete(Vector* vector, size_t index);
+void vector_shrink_to_fit(Vector* vector);
 
 #endif
