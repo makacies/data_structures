@@ -20,5 +20,6 @@ void hashmap_insert(HashMap* map, char* key, char* value);
 void hashmap_remove(HashMap* map, char* key);
 char* hashmap_at(HashMap* map, char* key);
 double hashmap_load_factor(HashMap* map);
+void hashmap_resize(HashMap* map, size_t capacity);
 
 #endif
